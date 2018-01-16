@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">My Application</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Monkey</string>
+    <string name="second">跳转</string>
+    <string name="toWebview">ToWebview</string>
+    <string name="toDialog">ToDialog</string>
+</resources>
