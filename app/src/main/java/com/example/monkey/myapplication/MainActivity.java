@@ -17,7 +17,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private AlertDialog.Builder builder;
     private Button toDialog;
-    private Button toWebview;
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -45,8 +44,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        toWebview = (Button) findViewById(R.id.btn);
-        toWebview.setOnClickListener(this);
+        Button toWebView = (Button) findViewById(R.id.btn);
+        toWebView.setOnClickListener(this);
         toDialog = (Button) findViewById(R.id.dialog);
         toDialog.setOnClickListener(this);
     }
