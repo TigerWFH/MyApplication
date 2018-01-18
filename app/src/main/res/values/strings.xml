@@ -6,4 +6,6 @@
     <string name="second">跳转</string>
     <string name="toWebview">ToWebview</string>
     <string name="toDialog">ToDialog</string>
+    <string name="button">Button</string>
+    <string name="textview">TextView</string>
 </resources>

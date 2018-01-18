@@ -6,7 +6,6 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v4.view.ViewPager;
-import android.support.v4.view.PagerAdapter;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
@@ -79,8 +78,8 @@ public class MainActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(BaseFragment.newInstance("home"));
-        adapter.addFragment(BaseFragment.newInstance("dashBord"));
-        adapter.addFragment(BaseFragment.newInstance("monkey"));
+        adapter.addFragment(DashboardFragment.newInstance("dashBord"));
+        adapter.addFragment(MonkeyFragment.newInstance("monkey"));
         viewPager.setAdapter(adapter);
     }
 
