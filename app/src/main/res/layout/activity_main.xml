@@ -14,7 +14,7 @@
         android:id="@+id/viewPage"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
-        android:layout_weight="0.99" />
+        android:layout_weight="1.01" />
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/navigation"
