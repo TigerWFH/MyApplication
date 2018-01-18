@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 import android.support.design.widget.Snackbar;
+import android.webkit.WebView;
 
 public class MonkeyFragment extends Fragment {
     public static MonkeyFragment newInstance(String info) {
@@ -34,6 +35,8 @@ public class MonkeyFragment extends Fragment {
                 Snackbar.make(v, "Don't click me.please!.", Snackbar.LENGTH_SHORT).show();
             }
         });
+        WebView webView = view.findViewById(R.id.mkWebView);
+//        webView.loadUrl("https://www.baidu.com");
         return view;
     }
 }
