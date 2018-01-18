@@ -1,21 +1,14 @@
 package com.example.monkey.myapplication;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomNavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v4.view.ViewPager;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.TextView;
-import android.widget.Button;
-import android.app.AlertDialog;
 
 public class MainActivity extends AppCompatActivity {
 
-    private Button toDialog;
-    private AlertDialog.Builder builder;
     private ViewPager viewPager;
     private MenuItem menuItem;
     private BottomNavigationView bottomNavigationView;
@@ -68,11 +61,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         setupViewPager(viewPager);
-
-//        Button toWebView = (Button) findViewById(R.id.btn);
-//        toWebView.setOnClickListener(this);
-//        toDialog = (Button) findViewById(R.id.dialog);
-//        toDialog.setOnClickListener(this);
     }
 
     private void setupViewPager(ViewPager viewPager) {
@@ -83,22 +71,4 @@ public class MainActivity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
     }
 
-
-//    @Override
-//    public void onClick(View view) {
-//        switch(view.getId()) {
-//            case R.id.dialog:
-//                builder = new AlertDialog.Builder(this);
-//                builder.setTitle("monkey");
-//                builder.setCancelable(true);
-//                AlertDialog dg = builder.create();
-//                dg.show();
-//                break;
-//            case R.id.btn:
-//                Intent intent = new Intent();
-//                intent.setClass(MainActivity.this, Main2Activity.class);
-//                startActivity(intent);
-//                break;
-//        }
-//    }
 }
