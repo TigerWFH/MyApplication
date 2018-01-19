@@ -5,11 +5,14 @@ package com.example.monkey.myapplication;
  */
 
 import android.os.Bundle;
+import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebViewClient;
 import android.widget.TextView;
 import android.support.design.widget.Snackbar;
 import android.webkit.WebView;
@@ -27,16 +30,14 @@ public class MonkeyFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.monkey_view, null);
-        TextView tvInfo = (TextView) view.findViewById(R.id.mkTextView);
-        tvInfo.setText(getArguments().getString("info"));
-        tvInfo.setOnClickListener(new View.OnClickListener() {
+        WebView webView = view.findViewById(R.id.mkWebView);
+        webView.loadUrl("https://www.baidu.com");
+        webView.setWebViewClient(new WebViewClient(){
             @Override
-            public void onClick(View v) {
-                Snackbar.make(v, "Don't click me.please!.", Snackbar.LENGTH_SHORT).show();
+            public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
+                return super.shouldOverrideUrlLoading(view, request);
             }
         });
-        WebView webView = view.findViewById(R.id.mkWebView);
-//        webView.loadUrl("https://www.baidu.com");
         return view;
     }
 }
