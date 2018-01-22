@@ -5,8 +5,10 @@ package com.example.monkey.myapplication;
  */
 
 import android.graphics.Bitmap;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.support.annotation.RequiresApi;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -26,6 +28,7 @@ public class MonkeyFragment extends Fragment {
         return fragment;
     }
 
+    @RequiresApi(api = Build.VERSION_CODES.KITKAT)
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -34,7 +37,7 @@ public class MonkeyFragment extends Fragment {
         webView.setWebViewClient(new WebViewClient(){
             @Override
             public void onPageStarted(WebView view, String url, Bitmap favicon) {
-                System.out.println("***********begin loading***********");
+                System.out.println("***********begin loading***********:" + url);
                 super.onPageStarted(view, url, favicon);
             }
 
@@ -46,11 +49,14 @@ public class MonkeyFragment extends Fragment {
 
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
-                return super.shouldOverrideUrlLoading(view, request);
+                System.out.println("***********shouldOverrideUrlLoading***********");
+//                return super.shouldOverrideUrlLoading(view, request);
+                return false;
             }
         });
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
+        webView.setWebContentsDebuggingEnabled(true);
         webSettings.setCacheMode(WebSettings.LOAD_CACHE_ELSE_NETWORK);
         webView.loadUrl("https://www.baidu.com");
         return view;
