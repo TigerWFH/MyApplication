@@ -18,11 +18,11 @@ import android.webkit.WebSettings;
 import android.webkit.WebViewClient;
 import android.webkit.WebView;
 
-public class MonkeyFragment extends Fragment {
+public class Monkey extends Fragment {
     private WebView webView;
-    public static MonkeyFragment newInstance(String info) {
+    public static Monkey newInstance(String info) {
         Bundle args = new Bundle();
-        MonkeyFragment fragment = new MonkeyFragment();
+        Monkey fragment = new Monkey();
         args.putString("info", info);
         fragment.setArguments(args);
         return fragment;

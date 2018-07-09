@@ -6,19 +6,19 @@ import android.view.View;
 import android.widget.Button;
 import android.content.Intent;
 
-public class Main2Activity extends AppCompatActivity {
+public class ChildDashboard extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
+        setContentView(R.layout.child_dashboard);
         Button button = (Button) findViewById(R.id.button);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent();
-                intent.setClass(Main2Activity.this, MainActivity.class);
+                intent.setClass(ChildDashboard.this, MainActivity.class);
                 startActivity(intent);
             }
         });

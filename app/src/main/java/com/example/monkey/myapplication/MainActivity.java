@@ -65,9 +65,9 @@ public class MainActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(BaseFragment.newInstance("home"));
-        adapter.addFragment(DashboardFragment.newInstance("dashBord"));
-        adapter.addFragment(MonkeyFragment.newInstance("monkey"));
+        adapter.addFragment(Home.newInstance("home"));
+        adapter.addFragment(Dashboard.newInstance("dashBord"));
+        adapter.addFragment(Monkey.newInstance("monkey"));
         viewPager.setAdapter(adapter);
     }
 

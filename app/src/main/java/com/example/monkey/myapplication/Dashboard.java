@@ -16,10 +16,10 @@ import android.support.design.widget.Snackbar;
 import android.widget.Button;
 import android.content.Intent;
 
-public class DashboardFragment extends Fragment implements OnClickListener{
-    public static DashboardFragment newInstance(String info) {
+public class Dashboard extends Fragment implements OnClickListener{
+    public static Dashboard newInstance(String info) {
         Bundle args = new Bundle();
-        DashboardFragment fragment = new DashboardFragment();
+        Dashboard fragment = new Dashboard();
         args.putString("info", info);
         fragment.setArguments(args);
         return fragment;
@@ -45,7 +45,7 @@ public class DashboardFragment extends Fragment implements OnClickListener{
     @Override
     public void onClick(View view) {
         Intent intent = new Intent();
-        intent.setClass(getActivity(), Main2Activity.class);
+        intent.setClass(getActivity(), ChildDashboard.class);
         startActivity(intent);
     }
 }
