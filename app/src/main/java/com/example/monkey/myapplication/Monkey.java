@@ -43,15 +43,21 @@ public class Monkey extends Fragment {
 
             @Override
             public void onPageFinished(WebView view, String url) {
-                System.out.println("***********end loading***********");
+                System.out.println("***********end loading***********" + url);
                 super.onPageFinished(view, url);
             }
 
             @Override
             public boolean shouldOverrideUrlLoading(WebView view, WebResourceRequest request) {
-                System.out.println("***********shouldOverrideUrlLoading***********");
+                System.out.println("***********shouldOverrideUrlLoading***********" + request);
 //                return super.shouldOverrideUrlLoading(view, request);
-                return false;
+                return true;
+            }
+
+            @Override
+            public boolean shouldOverrideUrlLoading(WebView view, String url) {
+                System.out.println("***********shouldOverrideUrlLoading***********" + url);
+                return super.shouldOverrideUrlLoading(view, url);
             }
         });
         WebSettings webSettings = webView.getSettings();
