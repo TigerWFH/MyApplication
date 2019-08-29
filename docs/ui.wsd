@@ -1,0 +1,81 @@
+@startuml android UI class
+'java.lang.Object'
+'android.view.View'
+Object <|-- View
+
+View <|-- AnalogClock
+'android.widget.ImageView'
+View <|-- ImageView
+    'android.widget.ImageButton'
+    ImageView <|-- ImageButton
+        'android.widget.ZoomButton'
+        ImageButton <|-- ZoomButton
+    'android.widget.QuickContactBadge'
+    ImageView <|-- QuickContactBadge
+'android.inputmethodservice.KeyboardView'
+View <|-- KeyboardView
+View <|-- MediaRouteButton
+View <|-- ProgressBar
+View <|-- Space
+View <|-- SurfaceView
+View <|-- TextView
+View <|-- TextureView
+'android.view.ViewGroup'
+View <|-- ViewGroup
+'android.widget.AbsoluteLayout'
+    ViewGroup <|-- AbsoluteLayout
+        'android.webkit.WebView'
+        AbsoluteLayout <|-- WebView
+    ViewGroup <|-- AdapterView
+    'android.widget.FrameLayout'
+    ViewGroup <|-- FrameLayout
+        FrameLayout <|-- AppWidgetHostView
+        FrameLayout <|-- CalendarView
+        FrameLayout <|-- DatePicker
+        FrameLayout <|-- GestureOverlayView
+        FrameLayout <|-- HorizontalScrollView
+        FrameLayout <|-- MediaController
+        FrameLayout <|-- ScrollView
+        FrameLayout <|-- TabHost
+        FrameLayout <|-- TimePicker
+        FrameLayout <|-- ViewAnimator
+            'android.widget.ViewSwitcher'
+            ViewAnimator <|-- ViewSwitcher
+                'android.widget.ImageSwitcher'
+                ViewSwitcher <|-- ImageSwitcher
+                'android.widget.TextSwitcher'
+                ViewSwitcher <|-- TextSwitcher
+            'android.widget.ViewFlipper'
+            ViewAnimator <|-- ViewFlipper
+    'android.widget.GridLayout'
+    ViewGroup <|-- GridLayout
+    'android.widget.LinearLayout'
+    ViewGroup <|-- LinearLayout
+        'android.widget.ActionMenuView'
+        LinearLayout <|-- ActionMenuView
+        'android.widget.NumberPicker'
+        LinearLayout <|-- NumberPicker
+        'android.widget.RadioGroup'
+        LinearLayout <|-- RadioGroup
+        'android.widget.SearchView'
+        LinearLayout <|-- SearchView
+        'android.widget.TabWidget'
+        LinearLayout <|-- TabWidget
+        'android.widget.TableLayout'
+        LinearLayout <|-- TableLayout
+        'android.widget.TableRow'
+        LinearLayout <|-- TableRow
+        'android.widget.ZoomControls'
+        LinearLayout <|-- ZoomControls
+    'android.widget.RelativeLayout'
+    ViewGroup <|-- RelativeLayout
+        'android.widget.DialerFilter'
+        RelativeLayout <|-- DialerFilter
+        RelativeLayout <|-- TwoLineListItem
+    'android.widget.SlidingDrawer'
+    ViewGroup <|-- SlidingDrawer
+    'android.widget.Toolbar'
+    ViewGroup <|-- Toolbar
+    ViewGroup <|-- TvView
+View <|-- ViewStub
+@enduml
